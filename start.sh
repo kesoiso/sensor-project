@@ -1,0 +1,9 @@
+#!/bin/bash
+while true; do
+ ./sensor.sh
+  LATEST=$(tail -5 readings.log)
+  echo "<pre>$LATEST</pre>" > /usr/local/apache2/htdocs/sensor.html
+  sleep 5
+ done &
+httpd-foreground
+  

@@ -2,7 +2,7 @@
 while true; do
  ./sensor.sh
   LATEST=$(tail -5 readings.log)
-  echo "<pre>$LATEST</pre>" > /usr/local/apache2/htdocs/sensor.html
+  echo "<meta http-equiv='refresh' content='5' > <pre>$LATEST</pre>" > /usr/local/apache2/htdocs/sensor.html
   sleep 5
  done &
 httpd-foreground

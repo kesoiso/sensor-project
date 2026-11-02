@@ -1,0 +1,18 @@
+services:
+ dashboard:
+  build: .
+  ports:
+   - "8080:80"
+  volumes:
+   - sensor-data:/data
+  networks:
+   - sensor-net
+volumes:
+ sensor-data:
+   external: true
+networks:
+ sensor-net:
+ 
+
+
+ 
